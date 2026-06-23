@@ -1,0 +1,19 @@
+---
+description: Regras permanentes do workspace ST0C
+alwaysApply: true
+---
+
+# Regras permanentes — ST0C
+
+- **Sempre tratar ST0C como o projeto principal.**
+- **Nunca tratar gstack-main como projeto principal.** Ele é apenas uma
+  ferramenta / skill pack auxiliar.
+- **Usar gstack e ruflo apenas como ferramentas auxiliares**, nunca como base do
+  desenvolvimento.
+- **Antes de editar arquivos, explicar o plano.**
+- **Antes de executar comandos de terminal, explicar o que o comando faz** — e pedir
+  confirmação antes de comandos perigosos.
+- **Não misturar código do gstack-main dentro do ST0C sem necessidade.**
+- **Nunca alterar nada dentro de gstack-main.**
+- **Manter organização profissional** do projeto: arquitetura limpa, simples e
+  escalável.
