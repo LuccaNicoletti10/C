@@ -1,0 +1,35 @@
+# Dependências
+node_modules/
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# Build / cache
+dist/
+build/
+.cache/
+*.tsbuildinfo
+
+# ruflo runtime (config versionada; dados locais ignorados)
+.claude-flow/data/
+.claude-flow/logs/
+.claude-flow/sessions/
+.claude-flow/neural/
+.swarm/
+.claude/memory.db
+ruvector.db
+*.log
+*.tmp
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+
+# Test / coverage
+coverage/
+.nyc_output/

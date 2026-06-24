@@ -5,15 +5,31 @@ alwaysApply: true
 
 # Regras permanentes — ST0C
 
-- **Sempre tratar ST0C como o projeto principal.**
-- **Nunca tratar gstack-main como projeto principal.** Ele é apenas uma
-  ferramenta / skill pack auxiliar.
-- **Usar gstack e ruflo apenas como ferramentas auxiliares**, nunca como base do
-  desenvolvimento.
-- **Antes de editar arquivos, explicar o plano.**
-- **Antes de executar comandos de terminal, explicar o que o comando faz** — e pedir
-  confirmação antes de comandos perigosos.
-- **Não misturar código do gstack-main dentro do ST0C sem necessidade.**
-- **Nunca alterar nada dentro de gstack-main.**
-- **Manter organização profissional** do projeto: arquitetura limpa, simples e
-  escalável.
+## Documentação obrigatória
+
+- Seguir **[SYSTEM_ARCHITECTURE.md](../../SYSTEM_ARCHITECTURE.md)** para processo operacional.
+- Seguir **[CLAUDE.md](../../CLAUDE.md)** para skill routing e regras de agente.
+
+## Hierarquia
+
+- **ST0C = produto principal** (código, testes, docs versionados).
+- **gstack** = processo e revisão (`~/.claude/skills/gstack`) — não vendoring no repo.
+- **ruflo** = memória e coordenação (`.claude-flow/`) — não copiar agentes de outros projetos.
+- **gstack-main** = referência externa — **nunca modificar**.
+
+## Regras de trabalho
+
+- Explicar o plano **antes** de editar arquivos.
+- Explicar comandos de terminal; pedir confirmação para operações perigosas.
+- Processo formal (review, ship, autoplan) → delegar ao **Claude Code** com skills gstack.
+- Não criar frameworks de governança paralelos ao gstack/ruflo.
+
+## Source of truth
+
+| Domínio | Onde |
+|---------|------|
+| Produto | `README.md`, `docs/product/`, GitHub Issues |
+| Arquitetura | `docs/architecture/`, `docs/adr/` |
+| Decisões | gstack `decisions.jsonl` |
+| Memória | ruflo `.claude-flow/data/` |
+| Processo | `SYSTEM_ARCHITECTURE.md` |
